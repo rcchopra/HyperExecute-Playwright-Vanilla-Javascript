@@ -20,4 +20,7 @@ testDiscovery:
   command: grep -nri 'describe' tests  | sed 's/:test.*//'
 testRunnerCommand: npx playwright test $test
 
+env:
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+
 jobLabel: [playwright-VanillaJS, linux, autosplit] 
